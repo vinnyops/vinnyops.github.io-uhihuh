@@ -145,8 +145,8 @@ function modifyCode(text) {
 	addReplacement('skinManager.loadTextures(),', ',this.loadVape(),');
 	addReplacement('async loadSpritesheet(){', `
 		async loadVape() {
-			this.vapeTexture = await this.loader.loadAsync("https://raw.githubusercontent.com/7GrandDadPGN/VapeForMiniblox/main/assets/logo.png");
-			this.v4Texture = await this.loader.loadAsync("https://raw.githubusercontent.com/7GrandDadPGN/VapeForMiniblox/main/assets/logov4.png");
+			this.vapeTexture = await this.loader.loadAsync("https://codeberg.org/RealPacket/VapeForMiniblox/raw/branch/main/assets/logo.png");
+			this.v4Texture = await this.loader.loadAsync("https://codeberg.org/RealPacket/VapeForMiniblox/raw/branch/main/assets/logov4.png");
 		}
 		async loadSpritesheet(){
 	`, true);
