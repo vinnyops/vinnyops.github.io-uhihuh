@@ -178,7 +178,7 @@ function modifyCode(text) {
 			ctx$3.imageSmoothingEnabled = true;
 			ctx$3.imageSmoothingQuality = "high";
 			drawImage(ctx$3, textureManager.vapeTexture.image, posX, posY, 80, 21, \`HSL(\${(colorOffset % 1) * 360}, 100%, 50%)\`);
-			drawImage(ctx$3, textureManager.v4Texture.image, posX + 81, posY + 1, 33, 18);
+			drawImage(ctx$3, textureManager.v4Texture.image, posX, posY, 80, 21);
 
 			let offset = 0;
 			let stringList = [];
