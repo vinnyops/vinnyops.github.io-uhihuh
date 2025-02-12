@@ -135,7 +135,7 @@ function modifyCode(text) {
 	`);
 
 	addReplacement('VERSION$1," | ",', `"${vapeName} v2.0.0-dev"," | ",`);
-	addReplacement('if(!x.canConnect){', 'x.errorMessage = x.errorMessage === "Could not join server. You are connected to a VPN or proxy. Please disconnect from it and refresh the page." ? "[Vape] You\'re IP banned (these probably don\'t exist now anyways)" : x.errorMessage;');
+	addReplacement('if(!x.canConnect){', 'x.errorMessage = x.errorMessage === "Could not join server. You are connected to a VPN or proxy. Please disconnect from it and refresh the page." ? "[Impact] You\'re IP banned (these probably don\'t exist now anyways)" : x.errorMessage;');
 
 	// DRAWING SETUP
 	addReplacement('I(this,"glintTexture");', `
@@ -145,8 +145,8 @@ function modifyCode(text) {
 	addReplacement('skinManager.loadTextures(),', ',this.loadVape(),');
 	addReplacement('async loadSpritesheet(){', `
 		async loadVape() {
-			this.vapeTexture = await this.loader.loadAsync("https://codeberg.org/RealPacket/VapeForMiniblox/raw/branch/main/assets/logo.png");
-			this.v4Texture = await this.loader.loadAsync("https://codeberg.org/RealPacket/VapeForMiniblox/raw/branch/main/assets/logov4.png");
+			this.vapeTexture = await this.loader.loadAsync("https://raw.githubusercontent.com/vinnyops/vinnyops.github.io-uhihuh/refs/heads/main/logo.png");
+			this.v4Texture = await this.loader.loadAsync("https://raw.githubusercontent.com/vinnyops/vinnyops.github.io-uhihuh/refs/heads/main/logov4.png");
 		}
 		async loadSpritesheet(){
 	`, true);
@@ -382,7 +382,7 @@ function modifyCode(text) {
 		if (u == "GrandDad") {
 			const $ = skins[u];
 			return new Promise((et, tt) => {
-				textureManager.loader.load("https://raw.githubusercontent.com/7GrandDadPGN/VapeForMiniblox/main/assets/skin.png", rt => {
+				textureManager.loader.load("https://raw.githubusercontent.com/vinnyops/vinnyops.github.io/refs/heads/main/Yumeaskin.png", rt => {
 					const nt = {
 						atlas: rt,
 						id: u,
@@ -400,7 +400,7 @@ function modifyCode(text) {
 		if (u == "GrandDad") {
 			const $ = capes[u];
 			return new Promise((et, tt) => {
-				textureManager.loader.load("https://raw.githubusercontent.com/7GrandDadPGN/VapeForMiniblox/main/assets/cape.png", rt => {
+				textureManager.loader.load("", rt => {
 					const nt = {
 						atlas: rt,
 						id: u,
