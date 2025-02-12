@@ -1162,8 +1162,8 @@ function modifyCode(text) {
 
 			const survival = new Module("SurvivalMode", function(callback) {
 				if (callback) {
-					if (player) player.setGamemode(GameMode.fromId("survival"));
-					survival.toggle();
+					if (player) player.setGamemode(GameMode.fromId("creative"));
+					creative.toggle();
 				}
 			});
 
