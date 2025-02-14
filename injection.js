@@ -234,7 +234,7 @@ function modifyCode(text) {
 		if (player && h.text && !h.text.startsWith(player.name) && enabledModules["ChatDisabler"] && chatDelay < Date.now()) {
 			chatDelay = Date.now() + 1000;
 			setTimeout(function() {
-				ClientSocket.sendPacket(new SPacketMessage({text: Math.random() + ("\\n" + chatdisablermsg[1]).repeat(20)}));
+				ClientSocket.sendPacket(new SPacketMessage({text: Math.random() + ("\\n" + chatdisablermsg[1]).repeat(1)}));
 			}, 50);
 		}
 
@@ -1157,7 +1157,7 @@ function modifyCode(text) {
 			new Module("AutoQueue", function() {});
 			new Module("AutoVote", function() {});
 			const chatdisabler = new Module("ChatDisabler", function() {});
-			chatdisablermsg = chatdisabler.addoption("Message", String, "youtube.com/c/7GrandDadVape");
+			chatdisablermsg = chatdisabler.addoption("Message", String, "Bad at PvP? Get vape.gg");
 			new Module("FilterBypass", function() {});
 
 			const survival = new Module("SurvivalMode", function(callback) {
